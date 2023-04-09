@@ -1,16 +1,34 @@
-
-body {
-  background-color: #E8ECEF;
+.containerf {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  background-color: lawngreen;
+  height: 3rem;
 }
 
-.centered {
-    padding-top: 200px;
+@media screen and (max-width: 768px) {
+  .item{
+    flex-basis: 100%;
     text-align: center;
+  }
 }
 
-.secret-text {
-  text-align: center;
-  font-size: 2rem;
-  color: #fff;
-  background-color: #000;
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.item:end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item p {
+  margin: 0;
 }
