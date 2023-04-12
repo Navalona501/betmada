@@ -1,0 +1,92 @@
+<div class="container">
+    
+    <div class="row">
+        <div class="col-lg-6">
+            <h2 class="text-center">Free Football Tips Today</h2>
+
+            <div class="day-select mb-3 mx-3">
+                <h3 class="bg-success" id="today-button">TODAY</h3>
+                <h3 class="bg-success" id="yesterday-button">YESTERDAY</h3>
+                <h3 class="bg-success" id="tomorrow-button">TOMORROW</h3>
+            </div>
+            <div class="row mx-3 tips-title">
+                <div class="col-8">
+                    <h5>Match</h5>
+                </div>
+                <div class="col-2">
+                    <h5>Tip</h5>
+                </div>
+                <div class="col-2">
+                    <h5>Result</h5>
+                </div>
+            </div>
+            <% todayTipsp.forEach(function(item) { %>
+            <div class="row mx-3 tips-title tableTips today">
+                
+                <div class="col-8 py-2">
+                    <%= item.match %>
+                </div>
+                <div class="col-2 py-2">
+                    <%= item.tip %>
+                </div>
+                <div class="col-2 py-2">
+                    <%= item.result %>
+                </div>
+                
+            </div>
+            <% }) %>
+
+            <% yesterdayTipsp.forEach(function(item) { %>
+                <div class="row mx-3 tips-title tableTips yesterday">
+                    
+                    <div class="col-8 py-2">
+                        <%= item.match %>
+                    </div>
+                    <div class="col-2 py-2">
+                        <%= item.tip %>
+                    </div>
+                    <div class="col-2 py-2">
+                        <%= item.result %>
+                    </div>
+                    
+                </div>
+                <% }) %>
+
+                <div class="tableTips tomorrow">
+                    <p>Tomorrow free Predictions are not ready. Please check later.</p>
+                </div>
+        </div>
+
+        <div class="col-lg-6 mb-3">
+            <h2 class="text-center">Lastest VIP Wins</h2>
+            <div class="day-select">
+                <h3 class="bg-success">TODAY</h3>
+                <h3 class="bg-success">YESTERDAY</h3>
+                <h3 class="bg-success">TOMORROW</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.tableTips.yesterday').hide();
+    $('.tableTips.tomorrow').hide();
+
+    $('#yesterday-button').click(function() {
+        $('.tableTips.today').hide();
+        $('.tableTips.tomorrow').hide();
+        $('.tableTips.yesterday').show();
+    });
+
+    $('#today-button').click(function() {
+        $('.tableTips.today').show();
+        $('.tableTips.tomorrow').hide();
+        $('.tableTips.yesterday').hide();
+    });
+
+    $('#tomorrow-button').click(function() {
+        $('.tableTips.today').hide();
+        $('.tableTips.yesterday').hide();
+        $('.tableTips.tomorrow').show();
+    })
+</script>

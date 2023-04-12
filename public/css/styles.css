@@ -34,9 +34,9 @@
 }
 
 /* NAVBAR */
-.navbar{
+/* .navbar{
   height: 5.5rem;
-}
+} */
 
 #top-title{
   background-color: orangered;
@@ -53,3 +53,32 @@
 /* .card{
   max-width: 25rem;
 } */
+
+/* FREE FOOTBALL TIPS */
+.day-select{
+  display: flex;
+  justify-content: center;
+}
+
+.day-select h3{
+  font-size: large;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  /* background-color: green; */
+  border: 1px solid black;
+}
+
+/* .row h3{
+  font-size: large;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid black;
+} */
+
+.tips-title div{
+  border: 1px solid black;
+}
+
+.hidden {
+  display: none;
+}
