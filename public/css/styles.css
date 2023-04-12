@@ -32,3 +32,24 @@
 .item p {
   margin: 0;
 }
+
+/* NAVBAR */
+.navbar{
+  height: 5.5rem;
+}
+
+#top-title{
+  background-color: orangered;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* PRICING */
+.Pricing{
+  max-width: 1200px;
+}
+
+/* .card{
+  max-width: 25rem;
+} */
