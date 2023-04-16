@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .item{
+  .item {
     flex-basis: 100%;
     text-align: center;
   }
@@ -38,7 +38,7 @@
   height: 5.5rem;
 } */
 
-#top-title{
+#top-title {
   background-color: orangered;
   height: 5rem;
   display: flex;
@@ -46,7 +46,7 @@
 }
 
 /* PRICING */
-.Pricing{
+.Pricing {
   max-width: 1200px;
 }
 
@@ -55,12 +55,12 @@
 } */
 
 /* FREE FOOTBALL TIPS */
-.day-select{
+.day-select {
   display: flex;
   justify-content: center;
 }
 
-.day-select h3{
+.day-select h3 {
   font-size: large;
   font-weight: bold;
   padding: 0.5rem 1.5rem;
@@ -75,10 +75,11 @@
   border: 1px solid black;
 } */
 
-.tips-title div{
-  border: 1px solid black;
-}
-
 .hidden {
   display: none;
+}
+
+.horizontally-center{
+  display: flex;
+  justify-content: center;
 }

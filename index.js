@@ -57,7 +57,8 @@ app.get('/', async (req, res) => {
 
     res.render('home', {
       todayTipsp: result.todayTips,
-      yesterdayTipsp: result.yesterdayTips
+      yesterdayTipsp: result.yesterdayTips,
+      latestVipTipsp: result.latestVipTips
     });
   });
   
