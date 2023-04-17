@@ -18,12 +18,13 @@
         }
       </style>
       <div class="row mx-3 tips-title tableTips today">
+        
         <table>
           <thead>
             <tr>
-              <th>Match</th>
-              <th>Tip</th>
-              <th>Result</th>
+              <th style="width:65%">Match</th>
+              <th style="width:20%">Tip</th>
+              <th style="width:15%">Result</th>
             </tr>
           </thead>
           <tbody>
@@ -44,15 +45,17 @@
               <% }) %>
           </tbody>
         </table>
+      
       </div>
 
       <div class="row mx-3 tips-title tableTips yesterday">
+        
         <table>
           <thead>
             <tr>
-              <th>Match</th>
-              <th>Tip</th>
-              <th>Result</th>
+              <th style="width:65%">Match</th>
+              <th style="width:20%">Tip</th>
+              <th style="width:15%">Result</th>
             </tr>
           </thead>
           <tbody>
@@ -127,10 +130,17 @@
 <script>
   $(".tableTips.yesterday").hide();
   $(".tableTips.tomorrow").hide();
+  $("#today").removeClass("bg-success").addClass("bg-danger");
 
   function showOne(day) {
-    $(".tableTips").not(".latest-vip").fadeOut(250);
-    $(`.tableTips.${day}`).fadeIn(250);
+    $(".tableTips").not(".latest-vip").fadeOut(300).promise().done(function () {
+      $(".tableTips." + day).fadeIn(300);
+    });
+
+    $(".day-btn").removeClass("bg-success");
+    $(".day-btn").removeClass("bg-danger");
+    $("#" + day).addClass("bg-danger");
+    $(".day-btn").not("#" + day).addClass("bg-success");
   }
 
   $(".day-btn").click(function () {
@@ -141,11 +151,15 @@
     // Récupérer la hauteur maximale des deux divs
     var maxHeight = Math.max($('.tableTips.yesterday').height(), $('.tableTips.today').height());
     
+    // $('#tips').height(maxHeight + 100);
 
     // Appliquer la hauteur maximale aux deux divs
     $('.tableTips.yesterday, .tableTips.today, .tableTips.tomorrow').height(maxHeight);
-    console.log('max height selected' + maxHeight);
+    // console.log('max height selected' + maxHeight);
+    
 
   });
+
+
 </script>
 </div>
